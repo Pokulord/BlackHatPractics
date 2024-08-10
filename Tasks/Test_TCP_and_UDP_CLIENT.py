@@ -5,8 +5,8 @@ import socket
 
 # Хост, к которому будем подключаться
 
-HOST = "www.google.com"
-HOST_PORT = 80
+HOST = "0.0.0.0"
+HOST_PORT = 9998
 
 # Класс UDP-клиента
 # UDP - протокол не поддерживает подключения
@@ -31,7 +31,7 @@ class TCP_CLIENT:
         client.connect((HOST, HOST_PORT))
 
         # Отправляем данные 
-        client.send(b"GET / HTTP/1.1\r\Host: google.com\r\n\r\n")
+        client.send(b"SADFDSFSD")
 
         # Принимаем ответ
         response = client.recv(4096)
@@ -41,4 +41,4 @@ class TCP_CLIENT:
 
 if __name__ == "__main__":
     TCP_CLIENT()
-    UDP_CLIENT()
+    # UDP_CLIENT()
